@@ -1,16 +1,4 @@
-function helloForNumbersGreaterThanSeven() {
-  clearOutput();
-  let value = document.getElementById('entry').value;
-  console.log(`Вы ввели: ${value}`); // optional
-  if (!isNaN(value) && value.trim() !== '') {
-    if (isNumberGreaterThanSeven(value)) {
-      showHello();
-    }
-  } else {
-    showErrorMessage('Введите, пожалуйста, числовое значение.');
-  }
-}
-
+/* eslint-disable no-console */
 function clearOutput() {
   document.getElementsByClassName('output')[0].innerHTML = '';
 }
@@ -27,4 +15,17 @@ function showErrorMessage(message) {
 
 function isNumberGreaterThanSeven(value) {
   return value > 7;
+}
+
+function helloForNumbersGreaterThanSeven() {
+  clearOutput();
+  let value = document.getElementById('entry');
+  console.log(`Вы ввели: ${value}`); // optional
+  if (!Number.isNaN(value) && value.trim() !== '') {
+    if (isNumberGreaterThanSeven(value)) {
+      showHello();
+    }
+  } else {
+    showErrorMessage('Введите, пожалуйста, числовое значение.');
+  }
 }

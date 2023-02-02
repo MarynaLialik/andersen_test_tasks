@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andersen test task</title>
-    <link rel="stylesheet" href="style.css">
-    <script type = "text/javascript" src = "task_3.js"></script>
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">   
-        <div class="wrapper">
-            <h1>Andersen AQA test task</h1>   
-        </div>
-      </header> 
-      <main class="main">                 
-        <div class="wrapper">
-          <div class="container"> 
-            <nav class="main__navigation">                
-                <ul class="navigation">
-                  <li class="navigation__link ">
-                      <p>
-                          <a class='navigation-main active' href="index.html">Main</a>
-                      </p>
-                  </li>
-                  <li class="navigation__link">
-                      <p>
-                          <a class='task_1' href="task_1.html">Task 1</a>
-                      </p>
-                  </li>
-                  <li class="navigation__link">
-                      <p>
-                          <a class='task_2' href="task_2.html">Task 2</a>
-                      </p>
-                  </li>
-                  <li class="navigation__link">
-                    <p>
-                        <a class='task_3' href="task_3.html">Task 3</a>
-                    </p>
-                  </li>
-                  <li class="navigation__link">
-                    <p>
-                        <a class='task_4' href="task_4.html">Task 4</a>
-                    </p>
-                </ul>
-              </nav> 
-              <div>
-                <h4>Description of task: </h4>
-                <p>Дана скобочная последовательность: [((())()(())]] <br/>
-                    - Можно ли считать эту последовательность правильной? <br/>
-                    - Если ответ на предыдущий вопрос “нет” - то что необходимо в ней изменить, чтоб она стала правильной?
-                    
-                </p>
-            </div>
-            <div>
-                <h4>Answer:</h4>
-                   <p>
-                    Принимая за правильную скобочную последовательность определение, данное на <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BA%D0%BE%D0%B1%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C">страницe</a>
-мы можем утверждать что последовательность '[((())()(())]]' не является таковой. <br/>
-Для наглядности обозначив внутреннюю правильную скобочную последовательность '(())()(())' как А, получим '[( A ]]'. 
-Далее мы можем извлечь последовательность '( A ]' из внешних парных скобок '[]'.
-В таком виде '( A ]' явно видно, что обрамляющая последовательность A скобка слева '(' не соответствует обрамляющей справа скобке ']'. <br/>
-<br/>
 
-Чтобы упомянутая последовательность стала правильной необходимо выполнить одно из перечисленных действий (которые для удобства восприятия сгруппированы по операциям):<br/>
-<ul>
-    <li>удаление
-        <ul>
-            <li>
-                либо удалить обрамляющую последовательность A скобку слева '(' <br/>
-                и удалить обрамляющую последовательность A скобку справа ']' <br/>
-                => тогда получим A
-            </li>
-        </ul>
-       </li>
-    <li>вставка
-        <ul>
-            <li>
-                либо вставить слева от последовательности '( A ]' скобку '[' <br/>
-        и также вставить обрамляющую последовательность A скобку справа ')' <br/>
-        => тогда получим  [(A)]
-            </li>
-            <li>
-                либо вставить справа от последовательности '( A ]' скобку ')' <br/>
-        и также вставить обрамляющую последовательность A скобку слева '[' <br/>
-        => тогда получим  ([A])
-            </li>
-        </ul>
-    </li>
-    <li>удаление + вставка (также может быть рассмотрена как 'замена')
-        <ul>
-            <li>
-                либо удалить обрамляющую последовательность A скобку слева '(' <br/>
-        и также вставить слева к полученной последовательности 'A ]' скобку '['<br/>
-        => тогда получим  [A]
-            </li>
-            <li>
-                либо удалить обрамляющую последовательность A скобку справа ']'<br/>
-        и также добавить справа к полученной последовательности '( A' скобку ')' <br/>
-        => тогда получим  (A) 
-            </li> <br/>
-        </ul>
-    </li>
-</ul>
-                   </p>
-            </div>
-          </div> 
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="wrapper">
-          <div class="layout-3-column">
-            <h3>
-              2023
-            </h3>
-            <h3>
-              Made by <a href='https://github.com/MarynaLialik'>Maryna Lialik</a>
-            </h3>            
-            <div class='logo'>
-              <a href='https://andersenlab.com/'>
-                  <h5>for</h5>
-                  <img src='andersen_logo.svg' alt='Andersen logo'/>
-                  <h3>Andersen</h3>
-              </a>
-            </div>   
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andersen test task</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="task_3.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="wrapper">
+        <h1>Andersen AQA test task</h1>
+      </div>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="container">
+          <nav class="main__navigation">
+            <ul class="navigation">
+              <li class="navigation__link ">
+                <p>
+                  <a class='navigation-main active' href="index.html">Main</a>
+                </p>
+              </li>
+              <li class="navigation__link">
+                <p>
+                  <a class='task_1' href="task_1.html">Task 1</a>
+                </p>
+              </li>
+              <li class="navigation__link">
+                <p>
+                  <a class='task_2' href="task_2.html">Task 2</a>
+                </p>
+              </li>
+              <li class="navigation__link">
+                <p>
+                  <a class='task_3' href="task_3.html">Task 3</a>
+                </p>
+              </li>
+              <li class="navigation__link">
+                <p>
+                  <a class='task_4' href="task_4.html">Task 4</a>
+                </p>
+            </ul>
+          </nav>
+          <div>
+            <h4>Description of task: </h4>
+            <p>Дана скобочная последовательность: [((())()(())]] <br />
+              - Можно ли считать эту последовательность правильной? <br />
+              - Если ответ на предыдущий вопрос “нет” - то что необходимо в ней изменить, чтоб она стала правильной?
+
+            </p>
+          </div>
+          <div>
+            <h4>Answer:</h4>
+            <p>
+              Принимая за правильную скобочную последовательность определение, данное на <a
+                href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BA%D0%BE%D0%B1%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C">страницe</a>
+              мы можем утверждать что последовательность '[((())()(())]]' не является таковой. <br />
+              Для наглядности обозначив внутреннюю правильную скобочную последовательность '(())()(())' как А, получим
+              '[( A ]]'.
+              Далее мы можем извлечь последовательность '( A ]' из внешних парных скобок '[]'.
+              В таком виде '( A ]' явно видно, что обрамляющая последовательность A скобка слева '(' не соответствует
+              обрамляющей справа скобке ']'. <br />
+              <br />
+
+              Чтобы упомянутая последовательность стала правильной необходимо выполнить одно из перечисленных действий
+              (которые для удобства восприятия сгруппированы по операциям):<br />
+            <ul>
+              <li>удаление
+                <ul>
+                  <li>
+                    либо удалить обрамляющую последовательность A скобку слева '(' <br />
+                    и удалить обрамляющую последовательность A скобку справа ']' <br />
+                    => тогда получим A
+                  </li>
+                </ul>
+              </li>
+              <li>вставка
+                <ul>
+                  <li>
+                    либо вставить слева от последовательности '( A ]' скобку '[' <br />
+                    и также вставить обрамляющую последовательность A скобку справа ')' <br />
+                    => тогда получим [(A)]
+                  </li>
+                  <li>
+                    либо вставить справа от последовательности '( A ]' скобку ')' <br />
+                    и также вставить обрамляющую последовательность A скобку слева '[' <br />
+                    => тогда получим ([A])
+                  </li>
+                </ul>
+              </li>
+              <li>удаление + вставка (также может быть рассмотрена как 'замена')
+                <ul>
+                  <li>
+                    либо удалить обрамляющую последовательность A скобку слева '(' <br />
+                    и также вставить слева к полученной последовательности 'A ]' скобку '['<br />
+                    => тогда получим [A]
+                  </li>
+                  <li>
+                    либо удалить обрамляющую последовательность A скобку справа ']'<br />
+                    и также добавить справа к полученной последовательности '( A' скобку ')' <br />
+                    => тогда получим (A)
+                  </li> <br />
+                </ul>
+              </li>
+            </ul>
+            </p>
           </div>
         </div>
-      </footer> 
-    </div>   
-  </body>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="layout-3-column">
+          <h3>
+            2023
+          </h3>
+          <h3>
+            Made by <a href='https://github.com/MarynaLialik'>Maryna Lialik</a>
+          </h3>
+          <div class='logo'>
+            <a href='https://andersenlab.com/'>
+              <h5>for</h5>
+              <img src='andersen_logo.svg' alt='Andersen logo' />
+              <h3>Andersen</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

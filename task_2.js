@@ -1,14 +1,4 @@
-function helloForViacheslav() {
-  clearOutput();
-  let value = document.getElementById('entry').value;
-  console.log(`Вы ввели: ${value}`); // optional
-  if (isViacheslav(value)) {
-    showHello('Вячеслав');
-  } else {
-    value.trim() ? showErrorMessage('Нет такого имени.') : showErrorMessage('Введите, пожалуйста, имя.');
-  }
-}
-
+/* eslint-disable no-console */
 function showHello(value) {
   console.log(`Привет, ${value}`);
   document.getElementsByClassName('output')[0].innerHTML = `Привет, ${value}`;
@@ -25,4 +15,15 @@ function clearOutput() {
 function showErrorMessage(message) {
   console.log(message);
   document.getElementsByClassName('output')[0].innerHTML = message;
+}
+
+function helloForViacheslav() {
+  clearOutput();
+  const value = document.getElementById('entry');
+  console.log(`Вы ввели: ${value}`); // optional
+  if (isViacheslav(value)) {
+    showHello('Вячеслав');
+  } else {
+    value.trim() ? showErrorMessage('Нет такого имени.') : showErrorMessage('Введите, пожалуйста, имя.');
+  }
 }
