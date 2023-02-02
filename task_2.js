@@ -19,7 +19,7 @@ function showErrorMessage(message) {
 
 function helloForViacheslav() {
   clearOutput();
-  let value = document.getElementById('entry');
+  let value = document.getElementById('entry').value;
   console.log(`Вы ввели: ${value}`); // optional
   if (isViacheslav(value)) {
     showHello('Вячеслав');

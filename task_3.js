@@ -21,7 +21,7 @@ function showErrorMessage(message) {
 
 function multiplesOfThree() {
   clearOutput();
-  let value = document.getElementById('entry');
+  let value = document.getElementById('entry').value;
   const arrayPattern = /[+-]?([0-9]*[.])?[0-9]+/;
   console.log(arrayPattern.test(value)); // optional
   console.log(`Вы ввели: ${value}`); // optional
