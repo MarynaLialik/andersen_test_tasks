@@ -5,7 +5,7 @@ function showHello(value) {
 }
 
 function isViacheslav(value) {
-  return value.toLowerCase() == 'Вячеслав'.toLowerCase();
+  return value.toLowerCase().trim() == 'Вячеслав'.toLowerCase();
 }
 
 function clearOutput() {

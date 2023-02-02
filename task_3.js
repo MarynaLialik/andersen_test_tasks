@@ -19,6 +19,10 @@ function showErrorMessage(message) {
   document.getElementsByClassName('output')[0].innerHTML = message;
 }
 
+function isElementsNumbers(arr) {
+  return arr.map((element) => Number.isNaN(parseFloat(element))).includes(true);
+}
+
 function multiplesOfThree() {
   clearOutput();
   let value = document.getElementById('entry').value;
@@ -28,7 +32,11 @@ function multiplesOfThree() {
 
   if (arrayPattern.test(value)) {
     const arr = value.slice(1, -1).split(',');
-    showMultiplesOfThree(arr);
+    if (isElementsNumbers(arr)) {
+      showErrorMessage('Элементами данного массива могут быть только числа');
+    } else {
+      showMultiplesOfThree(arr);
+    }
   } else {
     value.trim()
       ? showErrorMessage('Введите, пожалуйста, массив в описанном выше формате.')

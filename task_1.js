@@ -20,10 +20,13 @@ function isNumberGreaterThanSeven(value) {
 function helloForNumbersGreaterThanSeven() {
   clearOutput();
   let value = document.getElementById('entry').value;
-  console.log(`Вы ввели: ${value}`); // optional
-  if (!Number.isNaN(value) && value.trim() !== '') {
+  //console.log(`Вы ввели: ${value}`); // optional
+  //console.log(Number.isNaN(parseFloat(value)));
+  if (!Number.isNaN(parseFloat(value)) && value.trim() !== '') {
     if (isNumberGreaterThanSeven(value)) {
       showHello();
+    } else {
+      showErrorMessage('Вы ввели число меньшее либо равное 7.');
     }
   } else {
     showErrorMessage('Введите, пожалуйста, числовое значение.');
