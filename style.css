@@ -34,7 +34,6 @@ p, ul {
 .header {
     padding: 20px;
     text-align: center;
-    color: white;
     background-color: rgba(255, 166, 0, 0.253);
     border-bottom: 1px solid #de7c4a;
 }
@@ -58,6 +57,8 @@ p, ul {
     min-width: 80px;
     text-align: center;
 }
+
+
 
 .footer {
     color: white;
