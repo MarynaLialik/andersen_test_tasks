@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-testArr = [0.3, -6.6, 9.9, 5, 7, 9, -9, 12, 25, 45, 36, Infinity, '9', '-12', '20', 'Ox1e'];
 
 function showMultiplesOfThree(arr) {
   arr
@@ -26,7 +25,9 @@ function isElementsNumbers(arr) {
 function multiplesOfThree() {
   clearOutput();
   let value = document.getElementById('entry').value;
-  const arrayPattern = /[+-]?([0-9]*[.])?[0-9]+/;
+  //const arrayPattern = /[+-]?([0-9]*[.])?[0-9]+/;
+  const arrayPattern = /\[[^\]]*\]/;
+
   console.log(arrayPattern.test(value)); // optional
   console.log(`Вы ввели: ${value}`); // optional
 
