@@ -25,10 +25,8 @@ function isElementsNumbers(arr) {
 function multiplesOfThree() {
   clearOutput();
   let value = document.getElementById('entry').value;
-  //const arrayPattern = /[+-]?([0-9]*[.])?[0-9]+/;
   const arrayPattern = /\[[^\]]*\]/;
 
-  console.log(arrayPattern.test(value)); // optional
   console.log(`Вы ввели: ${value}`); // optional
 
   if (arrayPattern.test(value)) {

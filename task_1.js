@@ -20,8 +20,8 @@ function isNumberGreaterThanSeven(value) {
 function helloForNumbersGreaterThanSeven() {
   clearOutput();
   let value = document.getElementById('entry').value;
-  //console.log(`Вы ввели: ${value}`); // optional
-  //console.log(Number.isNaN(parseFloat(value)));
+  console.log(`Вы ввели: ${value}`); // optional
+
   if (!Number.isNaN(parseFloat(value)) && value.trim() !== '') {
     if (isNumberGreaterThanSeven(value)) {
       showHello();
